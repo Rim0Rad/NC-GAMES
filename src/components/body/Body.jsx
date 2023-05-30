@@ -1,11 +1,11 @@
-import Profile from './Profile.jsx';
-import MainPage from './MainPage.jsx';
-import LoginPage from './LoginPage.jsx';
-import SignUpPage from './SignUpPage.jsx';
-import ReviewPage from './ReviewPage.jsx';
-import CategoryPage from './CategoryPage.jsx';
-import TopReviewsPage from './TopReviews.jsx';
-import PostReviewPage from './PostReviewPage.jsx';
+import Profile from './profile/Profile.jsx';
+import MainPage from './home/MainPage.jsx';
+import LoginPage from './login/LoginPage.jsx';
+import SignUpPage from './signup/SignUpPage.jsx';
+import ReviewPage from './review/ReviewPage.jsx';
+import CategoryPage from './category/CategoryPage.jsx';
+import TopReviewsPage from './topreviews/TopReviewsPage.jsx';
+import PostReviewPage from './newreview/PostReviewPage.jsx';
 
 import { Routes, Route } from 'react-router-dom'
 

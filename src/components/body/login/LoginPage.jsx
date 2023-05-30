@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 
 function LoginPage () {
 
@@ -13,6 +13,7 @@ function LoginPage () {
                     <input></input>
                     <button>Log In</button>
                 </form>
+                <Link to='/signup'><button>Sing Up</button></Link>
             </section>
         </section>
     )

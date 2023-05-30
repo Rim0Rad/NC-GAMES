@@ -1,4 +1,4 @@
-import ReviewList from './ReviewList>'
+import ReviewList from '../home/ReviewList.jsx'
 
 function TopReviewsPage () {
 

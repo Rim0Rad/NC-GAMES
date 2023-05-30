@@ -1,6 +1,6 @@
-import Header from './components/Header.jsx'
-import Body from './components/Body.jsx'
-import Footer from './components/Footer.jsx'
+import Header from './components/header/Header.jsx'
+import Body from './components/body/Body.jsx'
+import Footer from './components/footer/Footer.jsx'
 import './App.css'
 import { useState } from 'react'
 

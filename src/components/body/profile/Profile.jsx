@@ -1,5 +1,5 @@
-import ReviewList from './ReviewList.jsx'
-import CommentList from './CommnetList.jsx'
+import ReviewList from '../home/ReviewList.jsx'
+import CommentList from '../review/comment/CommnetList.jsx'
 import ProfileDetails from './ProfileDetails.jsx'
 
 function Profile () {

@@ -1,6 +1,6 @@
 import Review from './Review.jsx';
 import LikeBar from './LikeBar.jsx';
-import Comments from './Comments.jsx'
+import Comments from './comment/Comments.jsx'
 
 function ReviewPage () {
 
