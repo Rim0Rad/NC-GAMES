@@ -18,11 +18,12 @@ function Body () {
                 <Route path='/' element={<MainPage/>}/>
                 <Route path='/login' element={<LoginPage/>}/>
                 <Route path='/signup' element={<SignUpPage/>}/>
-                <Route path='/review/:review_id' element={<ReviewPage/>}/>
+                <Route path='/reviews/:review_id' element={<ReviewPage/>}/>
                 <Route path='/categories' element={<CategoryPage/>}/>
                 <Route path='/newreview' element={<PostReviewPage/>}/>
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/topreviews' element={<TopReviewsPage/>}/>
+                {/* <Route path='/users/:user_id' element={<Profile/>}/>  TODO: backend endpoint for users by id, usersProfile witht no acces to their settings*/}
             </Routes>
         </section>
     )
