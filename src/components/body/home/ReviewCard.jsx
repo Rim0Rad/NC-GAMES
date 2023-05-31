@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 function ReviewCard ( { review }) {
 
     return (
-        <Link  className="link" to='/reviews/1'>
+        <Link className="link" to={`/reviews/${review.review_id}`}>
             <section className="reviewCard">
                 <img id="reviewCardImg" src={review.review_img_url}></img>
                 <h4 id="reviewCardTitle">{review.title}</h4>

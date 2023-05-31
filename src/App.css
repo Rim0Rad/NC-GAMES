@@ -46,6 +46,10 @@ section {
 li {
   list-style: none;
 }
+
+.date {
+  font-size: 12px;
+}
 /*- ----- Review Card -----  -*/
 #reviewCardImg{
   grid-area: pic;

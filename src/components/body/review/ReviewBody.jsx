@@ -1,11 +1,11 @@
 
 
-function ReviewBody () {
+function ReviewBody ( { body }) {
 
     return (
         <section>
             <h4>Review Body</h4>
-            <p>review....</p>
+            <p>{body}</p>
         </section>
     )
 }

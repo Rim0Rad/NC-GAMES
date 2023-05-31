@@ -1,11 +1,10 @@
 
 
-function ReviewImage () {
+function ReviewImage ( { img_url}) {
 
     return (
         <section>
-            <p>img</p>
-            <img></img>
+            <img src={img_url}></img>
         </section>
     )
 }
