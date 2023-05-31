@@ -1,14 +1,12 @@
 import CommentCard from './CommentCard.jsx'
 
-function CommentList () {
+function CommentList ( { commentList }) {
 
     return (
         <section>
-            <h3>Comments</h3>
-            <ul>
-                <CommentCard/>
-                <CommentCard/>
-            </ul>
+            {commentList.map( comment => {
+                return <CommentCard key={comment.comment_id} comment={comment}/>
+            })}
         </section>
     )
 }
