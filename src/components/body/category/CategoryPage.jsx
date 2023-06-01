@@ -9,7 +9,6 @@ function CategoryPage ( {category} ) {
     useEffect( () => {
         fetchReviews(category.slug)
         .then( reviews => {
-            console.log(reviews)
             setReviewList(reviews)
         })
     }, [])

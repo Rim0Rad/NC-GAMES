@@ -1,7 +1,7 @@
-import axios from 'axios'
+import instance from "./axiosInstance.js"
 
 export const fetchCategories = () => {
 
-    return axios.get(`https://nc-games-x7ut.onrender.com/api/categories`)
+    return instance.get(`/categories`)
     .then( result => result.data.categories)
 } 
