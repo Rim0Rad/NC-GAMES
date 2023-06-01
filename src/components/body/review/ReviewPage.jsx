@@ -32,7 +32,7 @@ function ReviewPage () {
         <section>
             <h2>""Review Page""</h2>
             <Review review={review}/>
-            <LikeBar votes={review.votes}/>
+            <LikeBar review={review}/>
             <Comments review_id={review.review_id}/>
         </section>
     )

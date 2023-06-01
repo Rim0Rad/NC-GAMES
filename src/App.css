@@ -112,6 +112,7 @@ section {
   align-items:center;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 10px;
   
 }
 #commentbody {
@@ -132,11 +133,22 @@ section {
 #commentvotes {
   grid-area: commentvotes;
 }
-#votebuttons {
+
+
+#votebuttons, #sharebt {
   grid-area: votebuttons;
   border-radius: 20px;
-  width:30px
+  width:30px;
+  height: 40px;
+  margin: 5px;
+  background-color: rgba(92, 174, 250, 0.63);
 }
-#upvoteimg {
-  width:10px
+.upvoteimg, #shareimg {
+  width:10px;
+}
+
+#likebar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
