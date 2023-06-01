@@ -5,10 +5,11 @@ import { fetchCommentsByReview } from '../../../../api/comments.js'
 
 import { useState, useEffect } from 'react';
 
-function Comments ( { review_id } ) {
+function Comments ( { review_id, logedIn } ) {
+
     const [ commentList, setCommentList ] = useState( [] )
     const [ isLoading, setIsLoading ] = useState( true )
-
+    
     useEffect( () => {
         fetchCommentsByReview(review_id)
         .then( comments => {
@@ -17,6 +18,10 @@ function Comments ( { review_id } ) {
         })
     }, [])
 
+    
+    useEffect( () => {
+    }, [commentList]) 
+
     if( isLoading ){
         return (
             <section>
@@ -24,11 +29,11 @@ function Comments ( { review_id } ) {
             </section>
         )
     }
-
+    
     return (
         <section>
-            <NewComment/>
-            <CommentList commentList={commentList}/>
+            <NewComment commentList={commentList} setCommentList={setCommentList} logedIn={logedIn} review_id={review_id}/>
+            <CommentList commentList={commentList} setCommentList={setCommentList}/>
         </section>
     )
 }
