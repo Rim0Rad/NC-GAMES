@@ -8,8 +8,8 @@ function Profile () {
         <section>
             <h2>""Profile""</h2>
             <ProfileDetails/>
-            <ReviewList/>
-            <CommentList/>
+            {/* <ReviewList/> // add a list of posted reviews*/}
+            {/* <CommentList/> // add a list most recent comments */}
         </section>
     )
 }

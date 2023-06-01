@@ -1,28 +1,43 @@
-import { useState } from 'react';
+import { postNewComment } from '../../../../api/comments.js'
 
-function NewComment ( {commentList, setCommentList, user} ) {
+function NewComment ( { commentList, setCommentList, logedIn, review_id } ) {
 
-    // const [ newComment, setNewComment ] = useState( {
-    //     body: "",
-    //     votes: 0,
-    //     author: ""
-    // })
+    function handleSubmit( event ) {
+        event.preventDefault()
+        const newComment = {
+            body: event.target[0].value,
+            username: logedIn.username, //TODO: should have the user in database 
+            review_id: review_id,
+            vote: 0,
+            created_at: new Date().toUTCString()
+        }
 
-    // function handleSubmit( event ) {
-    //     event.preventDefault()
-    //     event.target.reset()
-    //     setCommentList([newComment, ...commentList])
-    // }
+        setCommentList([newComment, ...commentList])
+        
+        postNewComment(newComment, review_id)
+        .then(response => {
+            console.log(resposne)
+        })
+        .catch( err => {
+            console.log(err.response.data)
+        })
+        event.target.reset()
+    }
 
-    return (
-        <section>
+    if(logedIn.username){
+        return (
+            <section>
             <h4>Post new Comment</h4>
-            {/* <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <label>New Comment</label>
                 <input type="text"></input>
                 <button type="submit"> Post </button>
-            </form> */}
+            </form>
         </section>
+    )
+    }
+    return (
+        <p>Login to post a comment.</p>
     )
 }
 

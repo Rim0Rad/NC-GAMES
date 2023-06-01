@@ -9,16 +9,16 @@ import PostReviewPage from './newreview/PostReviewPage.jsx';
 
 import { Routes, Route } from 'react-router-dom'
 
-function Body () {
+function Body ( { logedIn, setLogedIn }) {
 
     return (
         <section className="body">
             <h2>""Body""</h2>
             <Routes>
                 <Route path='/' element={<MainPage/>}/>
-                <Route path='/login' element={<LoginPage/>}/>
+                <Route path='/login' element={<LoginPage setLogedIn={setLogedIn} logedIn={logedIn}/>}/>
                 <Route path='/signup' element={<SignUpPage/>}/>
-                <Route path='/reviews/:review_id' element={<ReviewPage/>}/>
+                <Route path='/reviews/:review_id' element={<ReviewPage logedIn={logedIn}/>}/>
                 <Route path='/categories' element={<CategoryPage/>}/>
                 <Route path='/newreview' element={<PostReviewPage/>}/>
                 <Route path='/profile' element={<Profile/>}/>

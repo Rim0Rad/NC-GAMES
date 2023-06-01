@@ -6,7 +6,7 @@ import { fetchReviewsById } from '../../../api/reviews.js';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function ReviewPage () {
+function ReviewPage ( { logedIn }) {
 
     const [ review, setReview ] = useState( [] )
     const [ isLoading, setIsLoading ] = useState( [] )
@@ -33,7 +33,7 @@ function ReviewPage () {
             <h2>""Review Page""</h2>
             <Review review={review}/>
             <LikeBar review={review}/>
-            <Comments review_id={review.review_id}/>
+            <Comments review_id={review.review_id} logedIn={logedIn}/>
         </section>
     )
 }
