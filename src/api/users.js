@@ -1,6 +1,6 @@
-import axios from 'axios';
+import instance from "./axiosInstance.js"
 
 export const fetchUsers = () => {
-    return axios.get(`https://nc-games-x7ut.onrender.com/api/users`)
+    return instance.get(`/users`)
     .then( result => result.data.users)
 }

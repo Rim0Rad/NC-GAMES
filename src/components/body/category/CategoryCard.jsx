@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom'
 
-
-function CategoryCard () {
+function CategoryCard ( { category }) {
 
     return (
-        <section>
-            <img></img>
-            <h4>Category Name</h4>
-            <p>Description...</p>
-        </section>
+        <Link to={`/categories/${category.slug}`}>
+            <section id="categorycard">
+                {/* TODO: implement category img into DB to display */}
+                <img></img> 
+                <h4>{category.slug}</h4>
+                <p>{category.description}</p>
+            </section>
+        </Link>
     )
 }
 
