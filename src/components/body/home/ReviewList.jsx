@@ -22,12 +22,11 @@ function ReviewList () {
         <section>
             <h3>Reviews</h3>
             <section>
-                    { reviewList.map( review => {
-                        return (
-                            <ReviewCard key={review.review_id} review={review}/>
-                        )
-                    })}
-
+                { reviewList.map( review => {
+                    return (
+                        <ReviewCard key={review.review_id} review={review}/>
+                    )
+                })}
             </section>
         </section>
     )
