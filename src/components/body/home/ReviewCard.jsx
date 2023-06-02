@@ -6,9 +6,11 @@ function ReviewCard ( { review }) {
         <Link className="link" to={`/reviews/${review.review_id}`}>
             <section className="reviewCard">
                 <img id="reviewCardImg" src={review.review_img_url}></img>
-                <h4 id="reviewCardTitle">{review.title}</h4>
-                <h5 id="reviewCardAuthor">by {review.owner}</h5>
+                <h3 id="reviewCardTitle">{review.title}</h3>
+                <h5 id="reviewCardAuthor">by {review.owner} <br/>
+                {new Date(review.created_at).toUTCString()}</h5>
                 <p id="reviewCardBody">{review.review_body.substr(0,100) + "..."}</p>
+                <p id="reviewCardDate"></p>
                 <section id="intereactions">
                     <p id="reviewCardVotes">Votes: {review.votes}</p>
                     <p id="reviewCardCommentCount">Comments: {review.comment_count}</p>

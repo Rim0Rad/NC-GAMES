@@ -46,6 +46,25 @@ section {
   font-size: 12px;
 }
 /*- ----- Review Card -----  -*/
+.reviewCard {
+  transition: all .4s ease;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "pic title . intereactions"
+    "pic author reviewdate intereactions"
+    "pic body body body";
+  /* grid-auto-flow: row; */
+  background: linear-gradient(90deg, yellow , rgba(0, 0, 250, 0) 1% 99%, yellow),
+              linear-gradient(yellow, rgba(152, 152, 233, 0.466), rgba(0, 0, 255, 0.466) 5% 95%,rgba(152, 152, 233, 0.466), yellow);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  column-gap: 20px;
+  min-width: 550px;
+}
+
 #reviewCardImg{
   grid-area: pic;
   height: 200px;
@@ -65,29 +84,14 @@ section {
   border-radius: 20px;
   padding: 5px;
 }
-
+#reviewCardDate {
+  grid-area: reviewdate;
+}
 #intereactions{
   grid-area: intereactions;
 }
 
-.reviewCard {
-  transition: all .4s ease;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "pic title . intereactions"
-    "pic author . intereactions"
-    "pic body body body";
-  /* grid-auto-flow: row; */
-  background: linear-gradient(90deg, yellow , rgba(0, 0, 250, 0) 1% 99%, yellow),
-              linear-gradient(yellow, rgba(152, 152, 233, 0.466), rgba(0, 0, 255, 0.466) 5% 95%,rgba(152, 152, 233, 0.466), yellow);
-  padding: 20px;
-  margin: 20px;
-  border-radius: 20px;
-  column-gap: 20px;
-  min-width: 550px;
-}
+
 .reviewCard:hover {
   transition: all .4s ease;
   margin: 10px 10px 10px 10px;
