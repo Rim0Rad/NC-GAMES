@@ -30,7 +30,7 @@ function NewComment ( { commentList, setCommentList, logedIn, review_id } ) {
             <h4>Post new Comment</h4>
             <form onSubmit={handleSubmit}>
                 <label>New Comment</label>
-                <input type="text"></input>
+                <input type="text" required></input>
                 <button type="submit"> Post </button>
             </form>
         </section>

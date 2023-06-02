@@ -20,12 +20,16 @@ export const fetchReviews = (query = "", category = "") => {
         }
         return reviews
     })
+    
 }
 
 export const fetchReviewsById = (review_id) => {
-
-    return instance.get(`/reviews/${review_id}`).
-    then( response => response.data.review)
+    return instance.get(`/reviews/${review_id}`)
+    .then( response => response.data.review)
+    .catch( err => {
+        console.log(err)
+        return false
+    })
 }
 
 
