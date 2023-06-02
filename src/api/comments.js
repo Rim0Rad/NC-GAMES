@@ -8,3 +8,7 @@ export const fetchCommentsByReview = (review_id) => {
 export const postNewComment = (newComment, review_id) => {
     return instance.post(`/reviews/${review_id}/comments`, newComment)
 }
+
+export const deleteComment = (comment_id) => {
+    return instance.delete(`/comments/${comment_id}`)
+}

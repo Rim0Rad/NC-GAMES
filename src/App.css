@@ -96,15 +96,16 @@ section {
 }
 
 /* REVIEW PAGE */
+
 /* --- Comment cards --- */
 
 .commentCard{
   display: grid;
   grid-template-rows: 40px auto;
-  grid-template-columns: 40% 40% 10% 10%;
+  grid-template-columns: 40% 40% 10% 5% 5%;
   grid-template-areas: 
-  "commentowner commentdate commentvotes votebuttons"
-  "commentbody commentbody commentbody commentbody";
+  "commentowner commentdate commentvotes votebuttons commentdelete"
+  "commentbody commentbody commentbody commentbody commentbody";
   
   background: linear-gradient(90deg, yellow , rgba(0, 0, 250, 0) 1% 99%, yellow),
   linear-gradient(yellow, rgba(152, 152, 233, 0.466), rgba(0, 0, 255, 0.384) 5% 95%,rgba(152, 152, 233, 0.466), yellow);
@@ -132,6 +133,13 @@ section {
 }
 #commentvotes {
   grid-area: commentvotes;
+}
+#deletecommentbt{
+  grid-area: commentdelete;
+  border-radius: 20px;
+  width:30px;
+  height: 40px;
+  background-color: rgba(250, 92, 92, 0.63)
 }
 
 
