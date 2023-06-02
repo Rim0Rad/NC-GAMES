@@ -7,7 +7,7 @@ function CategoryPage ( {category} ) {
     const [ reviewList, setReviewList ] = useState( [] )
 
     useEffect( () => {
-        fetchReviews(category.slug)
+        fetchReviews( "" , category.slug)
         .then( reviews => {
             setReviewList(reviews)
         })
