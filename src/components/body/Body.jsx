@@ -40,6 +40,8 @@ function Body ( { logedIn, setLogedIn }) {
                 <Route path='/newreview' element={<PostReviewPage/>}/>
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/topreviews' element={<TopReviewsPage/>}/>
+                <Route path='/categories/*' element={<h2>We don't play these kind of games here...</h2>}/>
+                <Route path='/*' element={<h2>You're not in Kansas anymore...</h2>}/>
                 {/* <Route path='/users/:user_id' element={<Profile/>}/>  TODO: backend endpoint for users by id, usersProfile witht no acces to their settings*/}
             </Routes>
         </section>

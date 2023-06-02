@@ -13,10 +13,10 @@ function ReviewPage ( { logedIn }) {
     const { review_id } = useParams();
 
     useEffect( () => {
-        fetchReviewsById(review_id).
+        fetchReviewsById( review_id ).
         then( review => {
-            setReview(review)
-            setIsLoading(false)
+            setReview( review )
+            setIsLoading( false )
         })
     }, [])
 
@@ -28,14 +28,23 @@ function ReviewPage ( { logedIn }) {
         )
     }
 
-    return (
-        <section>
-            <h2>""Review Page""</h2>
-            <Review review={review}/>
-            <LikeBar review={review}/>
-            <Comments review_id={review.review_id} logedIn={logedIn}/>
-        </section>
-    )
+    if(review){
+        return (
+            <section>
+                <h2>""Review Page""</h2>
+                <Review review={review}/>
+                <LikeBar review={review}/>
+                <Comments review_id={review.review_id} logedIn={logedIn}/>
+            </section>
+        )
+    }else{
+        return (
+            <section>
+                <h2>Sorry, review could not be foud... :(</h2>
+            </section>
+        )
+    }
+    
 }
 
 export default ReviewPage;
