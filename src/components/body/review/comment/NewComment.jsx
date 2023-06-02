@@ -4,22 +4,22 @@ function NewComment ( { commentList, setCommentList, logedIn, review_id } ) {
 
     function handleSubmit( event ) {
         event.preventDefault()
+
         const newComment = {
             body: event.target[0].value,
-            username: logedIn.username, //TODO: should have the user in database 
+            author: logedIn.username,
             review_id: review_id,
             vote: 0,
-            created_at: new Date().toUTCString()
+            created_at: new Date().toUTCString(),
+            comment_id: new Date().toUTCString()
         }
 
-        setCommentList([newComment, ...commentList])
-        
-        postNewComment(newComment, review_id)
+        postNewComment( newComment, review_id )
         .then(response => {
-            console.log(resposne)
+            setCommentList( [response.data.comment, ...commentList] )
         })
         .catch( err => {
-            console.log(err.response.data)
+            console.log( err )
         })
         event.target.reset()
     }

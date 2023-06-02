@@ -10,6 +10,8 @@ function CommentCard ( { comment, logedIn, commentList, setCommentList }) {
         deleteComment(comment.comment_id)
     }
 
+    // console.log(logedIn.username ===  comment.author)
+    console.log(comment.comment_id,"GAMECARD")
     return (
         <section className="commentCard">
             <h4 id="commentowner">Comment by {comment.author}</h4>
