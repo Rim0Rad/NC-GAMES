@@ -7,10 +7,10 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-section {
+/* section {
   border: 2px solid rgba(0, 0, 0, 0.452);
   margin: 10px;
-}
+} */
 
 .header {
   position: sticky;
@@ -154,6 +154,10 @@ section {
   height: 40px;
   margin: 5px;
   background-color: rgba(92, 174, 250, 0.63);
+}
+
+#votebuttons:disabled {
+  color:black;
 }
 .upvoteimg, #shareimg {
   width:10px;
