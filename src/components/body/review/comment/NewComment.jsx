@@ -24,7 +24,7 @@ function NewComment ( { commentList, setCommentList, logedIn, review_id } ) {
         event.target.reset()
     }
 
-    if(logedIn.username){
+    if(logedIn){
         return (
             <section>
             <h4>Post new Comment</h4>

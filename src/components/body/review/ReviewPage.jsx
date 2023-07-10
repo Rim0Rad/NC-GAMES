@@ -27,7 +27,6 @@ function ReviewPage ( { logedIn }) {
             </section>
         )
     }
-
     if(review){
         return (
             <section>

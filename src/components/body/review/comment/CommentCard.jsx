@@ -17,7 +17,7 @@ function CommentCard ( { comment, logedIn, commentList, setCommentList }) {
             <p id="commentvotes">Votes: {comment.votes}</p>
             <p id="commentbody">{comment.body}</p>
             <LikeButton target={comment} logedIn={logedIn}/>
-            { logedIn.username ===  comment.author && <button id="deletecommentbt" onClick={handleClick}>
+            { (logedIn) && (logedIn.username ===  comment.author) && <button id="deletecommentbt" onClick={handleClick}>
                 <b>X</b>
             </button> }
         </section>

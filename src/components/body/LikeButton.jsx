@@ -22,11 +22,9 @@ function LikeButton ( { target, logedIn }) {
         }
     }
 
-    useEffect( () => {
+    useEffect( () => {}, [haveVoted])
 
-    }, [haveVoted])
-
-    if(logedIn.username && !haveVoted){
+    if(logedIn && !haveVoted){
         return (
             <button id="votebuttons" onClick={handleLikeClick}>{votes}
                 <img className="upvoteimg" src='https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-upward-arrow-icon-png-image_925603.jpg'></img>

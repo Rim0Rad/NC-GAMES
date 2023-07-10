@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import ReviewCard from './ReviewCard.jsx';
+import Loader from '../Loader.jsx';
 
 import { fetchReviews } from '../../../api/reviews.js'
 
@@ -16,16 +17,15 @@ function ReviewList ( { sortParameters }) {
     }, [sortParameters])
 
     if(isLoading){
-        return <p>Loading...</p>
+        return <Loader/>
     }
     return (
-        <section>
-            <h3>Reviews</h3>
-            <section>
+        <section id="reviewsList">
+            {/* <section> */}
                 { reviewList.map( review => {
                     return <ReviewCard key={review.review_id} review={review}/>
                 })}
-            </section>
+            {/* </section> */}
         </section>
     )
 }
