@@ -1,0 +1,134 @@
+:root {
+  --red: rgb(151, 45, 7);
+  --tomato: rgb(255, 75, 62);
+  --yellow: rgb(255, 178, 15);
+  --maize: rgb(255, 229, 72);
+}
+
+#root {
+  min-width: 1050px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+.main {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.body {
+  flex: 1;
+}
+
+#pageHeader {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient( rgba(171, 174, 204, 0.87), rgba(171, 174, 204, 0));
+}
+
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.301);
+  color: white;
+}
+
+.sectionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sectionColumn {
+  display: flex;
+  flex-direction: column;
+}
+.spaced {
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color:black;
+}
+
+.date {
+  font-size: 12px;
+}
+
+.pageTitle {
+  font-size: 25px;
+}
+
+/* REVIEW PAGE */
+/* 
+#votebuttons, #sharebt {
+  grid-area: votebuttons;
+  border-radius: 20px;
+  width:30px;
+  height: 40px;
+  margin: 5px;
+  background-color: rgba(92, 174, 250, 0.63);
+}
+
+#votebuttons:disabled {
+  color:black;
+}
+.upvoteimg, #shareimg {
+  width:10px;
+}
+
+#likebar {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+Login form */
+#loginpage, #signuppage, #postreviewpage {
+  #loginbox {
+    /* border: 10px solid rgba(0, 0, 0, 0.158); */
+    /* border-radius: 20px; */
+    /* padding: 10px; */
+  }
+  #loginform{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .loginformitems {
+    margin: 5px;
+  }
+ 
+  
+  /* Sign up and post review forms */
+  
+  #signupform, #postreviewform{
+    /* border: 10px solid rgba(0, 0, 0, 0.158); */
+    border-radius: 20px;
+    padding: 10px;
+  }
+  #signupinputs, #postreviewinputs {
+    display:grid;
+    grid-template-columns: 200px 200px;
+    
+    justify-content: center;
+    padding:10px
+  }
+  .signupforminput, .postreviewinput{
+    margin-bottom: 10px;
+  }
+  .reqStar{
+    color: red;
+  }
+}
+
+.textbox{
+  width:96%;
+  height:200px;
+  padding:5px;
+}

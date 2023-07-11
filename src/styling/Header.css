@@ -1,0 +1,72 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(10, 3, 54);
+  padding-inline: 20px;
+}
+
+#buttonsBar {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+#navBar {
+  align-self: center;
+  flex: 3;
+  border: 2px solid white;
+  margin: 0 20px;
+  border-radius: 20px;
+  padding: 3px;
+ 
+}
+
+.loginBar {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+
+}
+
+.navButton, #loginbt{
+  height: 80px;
+  border-radius: 5px;
+  font-family: Calibri;
+  font-size: 16px;
+  
+}
+.navButtonLeft, #loginbt {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.navButtonRight, #loginbt {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#loginbt {
+  width: 100px;
+}
+
+.navButton:hover, #loginbt:hover {
+  background-color: rgba(102, 54, 190, 0.363);
+  height: 82px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-color: rgba(119, 80, 190, 0.363);
+}
+
+.navButton:focus {
+  background-color: rgb(102, 54, 190);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#loginBarButton{
+  border-radius: 20px;
+  background-color: red;
+}

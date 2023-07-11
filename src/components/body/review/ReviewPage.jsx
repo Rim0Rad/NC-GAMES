@@ -27,13 +27,12 @@ function ReviewPage ( { logedIn }) {
             </section>
         )
     }
-
     if(review){
         return (
             <section>
                 <h2>""Review Page""</h2>
                 <Review review={review}/>
-                <LikeBar review={review}/>
+                <LikeBar review={review} logedIn={logedIn}/>
                 <Comments review_id={review.review_id} logedIn={logedIn}/>
             </section>
         )

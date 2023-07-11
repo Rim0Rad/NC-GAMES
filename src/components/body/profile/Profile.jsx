@@ -1,4 +1,4 @@
-import ReviewList from '../home/ReviewList.jsx'
+import ReviewList from '../reviews/ReviewList.jsx'
 import CommentList from '../review/comment/CommnetList.jsx'
 import ProfileDetails from './ProfileDetails.jsx'
 

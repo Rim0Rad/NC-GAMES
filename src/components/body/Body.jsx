@@ -1,16 +1,17 @@
 import Profile from './profile/Profile.jsx';
-import MainPage from './home/MainPage.jsx';
+import HomePage from './main/HomePage.jsx';
 import LoginPage from './login/LoginPage.jsx';
-import SignUpPage from './signup/SignUpPage.jsx';
 import ReviewPage from './review/ReviewPage.jsx';
-import CategoriesPage from './category/CategoriesPage.jsx';
+import SignUpPage from './signup/SignUpPage.jsx';
+import ReviewsPage from './reviews/ReviewsPage.jsx';
 import CategoryPage from './category/CategoryPage.jsx';
-import TopReviewsPage from './topreviews/TopReviewsPage.jsx';
+import CategoriesPage from './category/CategoriesPage.jsx';
 import PostReviewPage from './newreview/PostReviewPage.jsx';
+import TopReviewsPage from './topreviews/TopReviewsPage.jsx';
 
 import { Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import { fetchCategories } from '../../api/categories.js';
+import { useState, useEffect } from 'react'
 
 function Body ( { logedIn, setLogedIn }) {
 
@@ -27,9 +28,10 @@ function Body ( { logedIn, setLogedIn }) {
 
     return (
         <section className="body">
-            <h2>""Body""</h2>
             <Routes>
-                <Route path='/' element={<MainPage/>}/>
+                <Route path='/home' element={<HomePage/>}/>
+                <Route path='/reviews' element={<ReviewsPage/>}/>
+
                 <Route path='/login' element={<LoginPage setLogedIn={setLogedIn} logedIn={logedIn}/>}/>
                 <Route path='/signup' element={<SignUpPage/>}/>
                 <Route path='/reviews/:review_id' element={<ReviewPage logedIn={logedIn}/>}/>

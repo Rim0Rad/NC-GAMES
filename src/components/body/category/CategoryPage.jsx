@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { fetchReviews } from '../../../api/reviews';
-import ReviewCard from '../home/ReviewCard';
+import ReviewCard from '../reviews/ReviewCard';
 
 function CategoryPage ( {category} ) {
 
@@ -15,7 +15,7 @@ function CategoryPage ( {category} ) {
 
     return (
         <section>
-            <h3>{category.slug}</h3>
+            <h3>{category.slug.toUpperCase()}</h3>
             <p>{category.description}</p>
             <section>
                 {reviewList.map( review => {

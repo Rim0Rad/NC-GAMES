@@ -1,0 +1,26 @@
+/* * {
+    border: 1px solid black;
+    margin: 1px;
+} */
+
+
+#reviewsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+label {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+select {
+    border-radius: 10px;
+    height: 30px;
+}
+
+option {
+    border-radius: 20px;
+}

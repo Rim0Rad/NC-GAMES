@@ -16,8 +16,8 @@ function CommentCard ( { comment, logedIn, commentList, setCommentList }) {
             <p id="commentdate" className="date">{ new Date(comment.created_at).toUTCString()}</p>
             <p id="commentvotes">Votes: {comment.votes}</p>
             <p id="commentbody">{comment.body}</p>
-            <LikeButton target={comment}/>
-            { logedIn.username ===  comment.author && <button id="deletecommentbt" onClick={handleClick}>
+            <LikeButton target={comment} logedIn={logedIn}/>
+            { (logedIn) && (logedIn.username ===  comment.author) && <button id="deletecommentbt" onClick={handleClick}>
                 <b>X</b>
             </button> }
         </section>
