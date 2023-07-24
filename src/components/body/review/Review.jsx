@@ -7,7 +7,7 @@ import ReviewImage from './ReviewImage.jsx';
 function Review ( { review }) {
     
     return (
-        <section>
+        <section id="reviewContainer">
             <ReviewInfo title={review.title} created_at={review.created_at} owner={review.owner} category={review.category} designer={review.designer}/>
             <ReviewImage img_url={review.review_img_url}/>
             <ReviewBody body={review.review_body}/>

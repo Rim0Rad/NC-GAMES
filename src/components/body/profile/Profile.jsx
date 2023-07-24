@@ -4,6 +4,8 @@ import ProfileDetails from './ProfileDetails.jsx'
 
 function Profile () {
 
+    
+
     return (
         <section>
             <h2>""Profile""</h2>

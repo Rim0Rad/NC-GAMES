@@ -4,7 +4,9 @@ function TopReviewsPage () {
 
     return (
         <section>
-            <h2>Top Reviews Page</h2>
+            <section className='pageHeader'>
+                <h2>Top Reviews</h2>
+            </section>
             <ReviewList sortParameters={{sort_by: "votes", order: "DESC"}}/>
         </section>
     )

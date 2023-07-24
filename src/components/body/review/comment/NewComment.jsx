@@ -26,18 +26,20 @@ function NewComment ( { commentList, setCommentList, logedIn, review_id } ) {
 
     if(logedIn){
         return (
-            <section>
-            <h4>Post new Comment</h4>
-            <form onSubmit={handleSubmit}>
-                <label>New Comment</label>
-                <input type="text" required></input>
-                <button type="submit"> Post </button>
-            </form>
-        </section>
+            <section id="newCommentContainer">
+                <h4>Post new Comment</h4>
+                <form onSubmit={handleSubmit}>
+                    <label>New Comment</label>
+                    <input type="text" required></input>
+                    <button type="submit"> Post </button>
+                </form>
+            </section>
     )
     }
     return (
-        <p>Login to post a comment.</p>
+        <section id="newCommentContainer">
+            <h4>Login to post a comment.</h4>
+        </section>
     )
 }
 

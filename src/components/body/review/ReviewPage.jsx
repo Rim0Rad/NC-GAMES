@@ -1,12 +1,13 @@
 import Review from './Review.jsx';
 import LikeBar from './LikeBar.jsx';
 import Comments from './comment/Comments.jsx'
+import Loader from '../Loader.jsx';
 
 import { fetchReviewsById } from '../../../api/reviews.js';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function ReviewPage ( { logedIn }) {
+function ReviewPage ( { logedIn } ) {
 
     const [ review, setReview ] = useState( [] )
     const [ isLoading, setIsLoading ] = useState( [] )
@@ -23,14 +24,13 @@ function ReviewPage ( { logedIn }) {
     if( isLoading ) {
         return (
             <section>
-                <p>Loading Review Page...</p>
+                <Loader/>
             </section>
         )
     }
     if(review){
         return (
-            <section>
-                <h2>""Review Page""</h2>
+            <section id="reviewPage">
                 <Review review={review}/>
                 <LikeBar review={review} logedIn={logedIn}/>
                 <Comments review_id={review.review_id} logedIn={logedIn}/>

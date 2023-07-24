@@ -1,0 +1,84 @@
+
+
+ #reviewPage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+ }
+
+#reviewContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#reviewDetailsContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#reviewDetailsContainer > p{
+    margin: 1px
+}
+
+ #reviewImg{
+    border-radius: 20px;
+    max-height: 300px;
+    border: 10px solid rgba(0, 0, 0, 0.144);
+ }
+
+#reviewBodyContainer {
+    max-width: 600px;
+    margin: 20px;
+    border-radius: 20px;
+    border: 10px solid rgba(0, 0, 0, 0.144);
+    background-color: rgba(192, 192, 192, 0.322);
+}
+#reviewBodyContainer > p{
+  text-align: justify;
+  text-indent: 20px;
+  margin: 10px;
+}
+
+#likebar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    max-width: 600px;
+    min-width: 600px;
+    border-radius: 20px;
+    background-color:  rgba(0, 0, 0, 0.144);
+  }
+
+#votebuttons, #sharebt {
+    border-radius: 20px;
+    width:30px;
+    height: 40px;
+    margin: 5px;
+    background-color: rgba(92, 174, 250, 0.63);
+  }
+  
+  #votebuttons:disabled {
+    color:black;
+  }
+  .upvoteimg, #shareimg {
+    width:10px;
+  }
+
+  #commentsContainer{
+    background-color: rgba(0, 0, 0, 0.144);
+    border-radius: 20px;
+  }
+  
+  #newCommentContainer{
+    min-width: 620px;
+    width: 620px;
+  }
+
+
+  

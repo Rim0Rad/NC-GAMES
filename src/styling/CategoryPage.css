@@ -1,23 +1,17 @@
- * {
-    border: 1px solid black;
- }
-
-
 #categoryCard {
     transition: all .4s ease;
     display: flex;
     padding: 5px;
     margin: 10px;
     border-radius: 10px;
-    column-gap: 20px;
     min-width: 600px;
+    width: 60vh;
     background-color: rgba(21, 48, 107, 0.658);
     box-shadow: 0px 0px 10px 10px rgba(0, 4, 255, 0.144);
   }
 
 #categoryCard:hover {
     transition: all .4s ease;
-    margin: 10px 10px 10px 10px;
     padding: 10px;
     background: linear-gradient(90deg, rgba(255, 255, 0, 0.5) , rgba(0, 0, 250, 0) 1% 99%, rgba(255, 255, 0, 0.5)),
                 linear-gradient(rgba(255, 255, 0, 0.493), rgba(62, 62, 255, 0) 5% 95%, rgba(255, 255, 0, 0.5));

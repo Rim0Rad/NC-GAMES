@@ -9,9 +9,9 @@ function Loader () {
 
 
     return (
-        <sectio>
+        <section>
             <h2>{loadingMessage}</h2>
-        </sectio>
+        </section>
     )
 }
 

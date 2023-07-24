@@ -5,7 +5,9 @@ function ReviewCard ( { review }) {
     return (
         <Link className="link" to={`/reviews/${review.review_id}`}>
             <section className="reviewCard">
-                <img id="reviewCardImg" src={review.review_img_url}></img>
+                <section className='reviewImgContainer'>
+                    <img id="reviewCardImg" src={review.review_img_url}></img>
+                </section>
                 <section id="reviewDetailsContainer"className='sectionColumn'>
                     <section id="reviewCardBodyContainer" className='sectionRow spaced'>
                         <section id="reviewCardTitleContainer">

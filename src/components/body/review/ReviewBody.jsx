@@ -3,8 +3,7 @@
 function ReviewBody ( { body }) {
 
     return (
-        <section>
-            <h4>Review Body</h4>
+        <section id="reviewBodyContainer">
             <p>{body}</p>
         </section>
     )
