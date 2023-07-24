@@ -1,0 +1,40 @@
+.formContainer{
+    border: 10px solid grey;
+    border-radius: 20px;
+}
+
+.form {
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.formInput {
+    display: flex;
+    padding:5px;
+    margin: 5px;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+
+
+.reqStar{
+    color: red;
+}
+
+.textbox{
+    display: flex;
+    height:200px;
+    min-height: 300px;
+    max-height: 400px;
+    padding:5px;
+}
+
+.submitbt {
+    border-radius: 20px;
+    min-width: 100px;
+    min-height: 40px;
+    margin: 10px;
+}

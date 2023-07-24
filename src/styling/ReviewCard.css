@@ -2,9 +2,9 @@
     transition: all .4s ease;
     display: flex;
     max-width: 1000px;
-    min-width: 1000px;
-    margin: 5px;
-    padding: 10px;
+    min-width: 800px;
+    margin: 20px;
+    padding: 5px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 10px rgba(0, 4, 255, 0.144);
     
@@ -22,10 +22,13 @@
     flex:1;
     display: flex;
   }
-
   
+  .reviewImgContainer {
+    display: flex;
+    align-items: center;
+  }
+
   #reviewCardImg{
-    grid-area: pic;
     height: 200px;
     min-height: 150px;
     border-radius: 20px;
@@ -46,7 +49,7 @@
   
   .reviewCard:hover {
     transition: all .4s ease;
-    margin: 10px 10px 10px 10px;
+    padding: 20px;
     background: linear-gradient(90deg, rgba(255, 255, 0, 0.5) , rgba(0, 0, 250, 0) 1% 99%, rgba(255, 255, 0, 0.5)),
                 linear-gradient(rgba(255, 255, 0, 0.493), rgba(62, 62, 255, 0) 5% 95%, rgba(255, 255, 0, 0.5));
   }

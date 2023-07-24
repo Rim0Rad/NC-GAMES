@@ -15,11 +15,15 @@ function CategoriesPage () {
     },[])
 
     return (
-        <section>
-            <h2> All Cateories</h2>
-            {categoriesList.map( category => {
-                return <CategoryCard key={category.slug} category={category}/>
-            })}
+        <section className='page'>
+            <section className='pageHeader'>
+                <h2> All Cateories</h2>
+            </section>
+            <secption className="pageContent">
+                {categoriesList.map( category => {
+                    return <CategoryCard key={category.slug} category={category}/>
+                })}
+            </secption>
             
         </section>
     )

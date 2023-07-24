@@ -11,12 +11,14 @@ function ReviewsPage () {
     })
 
     return (
-        <section id="reviewPage">
-            <section id="pageHeader">
-                <h3 className="pageTitle">Latest Reviews</h3>
+        <section className="page">
+            <section className="pageHeader">
+                <p className="pageTitle">Latest Reviews</p>
                 <ListParameters setSortParameters={setSortParameters} sortParameters={sortParameters}/>
             </section>
-            <ReviewList sortParameters={sortParameters}/>
+            <section className='pageContent'>
+                <ReviewList sortParameters={sortParameters}/>
+            </section>
         </section>
     )
 }

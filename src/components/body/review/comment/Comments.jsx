@@ -31,7 +31,7 @@ function Comments ( { review_id, logedIn } ) {
     }
     
     return (
-        <section>
+        <section id="commentsContainer">
             <NewComment commentList={commentList} setCommentList={setCommentList} logedIn={logedIn} review_id={review_id}/>
             <CommentList commentList={commentList} setCommentList={setCommentList} logedIn={logedIn}/>
         </section>

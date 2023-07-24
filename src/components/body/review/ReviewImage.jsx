@@ -3,8 +3,8 @@
 function ReviewImage ( { img_url}) {
 
     return (
-        <section>
-            <img src={img_url}></img>
+        <section id="reviewImgContainer">
+            <img id="reviewImg" src={img_url}></img>
         </section>
     )
 }

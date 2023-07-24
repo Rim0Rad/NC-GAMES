@@ -21,11 +21,9 @@ function ReviewList ( { sortParameters }) {
     }
     return (
         <section id="reviewsList">
-            {/* <section> */}
                 { reviewList.map( review => {
                     return <ReviewCard key={review.review_id} review={review}/>
                 })}
-            {/* </section> */}
         </section>
     )
 }

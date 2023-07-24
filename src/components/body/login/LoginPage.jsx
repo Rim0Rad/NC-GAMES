@@ -9,15 +9,22 @@ function LoginPage ( { setLogedIn }) {
         event.preventDefault()
 
         fetchUsers( "username", event.target[0].value)
-        .then( user => {
-            console.log("user", user)
-            // if(user.some( user => user.username === event.target[0].value)){
-            //     setLogedIn({username: event.target[0].value})
-            //     sessionStorage.setItem('logedIn', event.target[0].value)
-            //     navigate('/home')
-            // }else{
-            //     alert("User not found")
-            // }
+        .then( users => {
+            const user = users.filter( user => {
+                return user.username === event.target[0].value;
+            })
+            console.log(user)
+
+            if(user){
+                setLogedIn(user)
+                sessionStorage.setItem('logedIn', user)
+                navigate('/home')
+            }else{
+                alert("User not found")
+            }
+        })
+        .catch( e => {
+            alert("User not found")
         })
     }
 
@@ -26,17 +33,23 @@ function LoginPage ( { setLogedIn }) {
     }
 
     return (
-        <section id="loginpage">
-            <h2>Login</h2>
-            <section id="loginbox">
-                <form id="loginform" onSubmit={handlerSubmit}>
-                    <label className="loginformitems">Username</label>
-                    <input className="loginformitems" onFocus={handleFocus} autoFocus placeholder='Username' required></input>
-                    <label className="loginformitems" >Password</label>
-                    <input className="loginformitems"  type="password" onFocus={handleFocus} placeholder='Password' required></input>
-                    <button className="loginformitems"  type="submit">Log In</button>
-                </form>
-                <Link  to='/signup'><button id="signupbt" >Sign Up</button></Link>
+        <section id="loginpage" className='page'>
+            <section className='pageHeader'>
+                <h2>Login</h2>
+            </section>
+            <section className="pageContent">
+                <section className="formContainer">
+                    <form className="form" onSubmit={handlerSubmit}>
+                        <section className='formInputs'>
+                            <label className="formLabel">Username</label>
+                            <input className="formInput" onFocus={handleFocus} autoFocus placeholder='Username' required></input>
+                            <label className="formLabel" >Password</label>
+                            <input className="formInput"  type="password" onFocus={handleFocus} placeholder='Password' required></input>
+                        </section>
+                        <button id="login"  className="submitbt"  type="submit">Log In</button>
+                        <Link  to='/signup'><button className='submitbt' >Sign Up</button></Link>
+                    </form>
+                </section>
             </section>
         </section>
     )
